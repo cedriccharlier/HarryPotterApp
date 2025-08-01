@@ -8,13 +8,13 @@ import { DurationPipe } from '../duration.pipe';
 import { BudgetPipe } from '../budget.pipe';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-movies',
   standalone: true,
   imports: [CommonModule, CurrencyPipe, DatePipe, TitleCasePipe, RouterLink, DurationPipe, BudgetPipe, FormsModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './movies.component.html',
+  styleUrl: './movies.component.css'
 })
-export class HomeComponent {
+export class MoviesComponent {
   movieSummaryList: MovieSummaryInfo[] = [];
   movieService: MovieService = inject(MovieService);
   filterTitle = '';

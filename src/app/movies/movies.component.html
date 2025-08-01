@@ -26,7 +26,8 @@
         Budget: {{ movieSummary.budget | budget }} millions&nbsp;
         Duration: {{ movieSummary.duration | duration }}
       </div>
-      <button [routerLink]="['/movies', movieSummary.id]" class="detail-button">Details</button>
+      <button [routerLink]="['/movies', movieSummary.id]"
+              class="detail-button" id="{{ movieSummary.id }}">Details</button>
     </li>
   </ul>
 </section>
