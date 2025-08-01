@@ -1,0 +1,37 @@
+<a href="#">← Back</a>
+
+<h1>{{ movieDetails?.title }}</h1>
+
+<div class="container">
+  <img class="poster" src="{{ movieDetails?.poster }}" alt="Harry Potter Poster">
+  <div class="summary">
+    <strong>Summary:</strong>
+    {{ movieDetails?.summary }}
+  </div>
+</div>
+
+<div class="details">
+  <div class="details-header">Details</div>
+  <table>
+    <tr>
+      <td>Box office</td>
+      <td>{{ movieDetails?.box_office | currency: 'USD' : 'symbol' : '0.0-1' }} million </td>
+    </tr>
+    <tr>
+      <td>Budget</td>
+      <td>{{ movieDetails?.budget || 0 | budget }} million</td>
+    </tr>
+    <tr>
+      <td>Duration</td>
+      <td>{{ movieDetails?.duration || 0 | duration }}</td>
+    </tr>
+    <tr>
+      <td>Producers</td>
+      <td>{{ movieDetails?.producers?.join(', ') }}</td>
+    </tr>
+    <tr>
+      <td>Cinematographers</td>
+      <td>{{ movieDetails?.cinematographers?.join(', ') }}</td>
+    </tr>
+  </table>
+</div>

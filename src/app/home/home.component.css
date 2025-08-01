@@ -1,0 +1,51 @@
+.filters {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.filter-inputs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-inputs input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.movie-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.movie-item {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-title {
+  font-weight: bold;
+}
+
+.movie-meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.details-button {
+  padding: 0.5rem 1rem;
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.details-button:hover {
+  background-color: #ddd;
+}

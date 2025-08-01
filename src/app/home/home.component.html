@@ -1,0 +1,30 @@
+<section>
+  <div class="filters">
+    <h4>Filters</h4>
+    <div class="filter-inputs">
+      <input
+        type="text"
+        [(ngModel)]="filterTitle"
+        placeholder="Title"
+      />
+      <input
+        type="text"
+        [(ngModel)]="filterYear"
+        placeholder="Release year"
+      />
+    </div>
+  </div>
+</section>
+<section class="results">
+  <ul class="movie-list">
+    <li *ngFor="let movieSummary of filteredMovies" class="movie-item">
+      <div class="movie-title">{{ movieSummary.title  | titlecase }}</div>
+      <div class="movie-meta">
+        Release date: {{ movieSummary.release_date | date : 'yyyy-MM-dd'}}&nbsp;
+        Budget: {{ movieSummary.budget | budget }} millions&nbsp;
+        Duration: {{ movieSummary.duration | duration }}
+      </div>
+      <button [routerLink]="['/movies', movieSummary.id]" class="detail-button">Details</button>
+    </li>
+  </ul>
+</section>
